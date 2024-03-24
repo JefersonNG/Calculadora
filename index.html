@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Calculadora</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./main.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="container">
+            <div id="display">
+                <span></span>
+            </div>
+
+            <div id="clean">
+                <button value="reset" class="reset">C</button>
+                <button value="delet" class="backspace ph ph-backspace"></button>
+            </div>
+                
+            <div id="keyboard">
+                <button value="9" class="nine">9</button>
+                <button value="8" class="eight">8</button>
+                <button value="7" class="seven">7</button>
+                <button value="6" class="six">6</button>
+                <button value="5" class="five">5</button>
+                <button value="4" class="four">4</button>
+                <button value="3" class="three">3</button>
+                <button value="2" class="two">2</button>
+                <button value="1" class="one">1</button>
+                <button value="0" class="zero">0</button>
+                
+            </div>
+            <div id="operation">
+                <button value="/" data-action="division" class="division ph ph-divide"></button>
+                <button value="*" data-action="multiply" class="multiply ph ph-x"></button>
+                <button value="-" data-action="subtract" class="subtract ph ph-minus"></button>
+                <button value="+" data-action="sum" class="sum ph ph-plus"></button>
+                <button value="=" data-action="equal" class="equal ph ph-equals"></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

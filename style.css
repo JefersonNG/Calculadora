@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body {
+
+
+    height: 100vh;
+
+    background-image: linear-gradient(315deg,
+            hsl(126deg 100% 71%) 0%,
+            hsl(78deg 100% 67%) 45%,
+            hsl(37deg 100% 69%) 60%,
+            hsl(0deg 100% 75%) 100%);
+
+    background-repeat: no-repeat;
+
+    display: grid;
+    place-content: center;
+}
+
+button,
+div {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr .5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "display display display display"
+        "clean clean clean operation"
+        "keyboard keyboard keyboard operation"
+        "keyboard keyboard keyboard operation"
+        "keyboard keyboard keyboard operation"
+        "keyboard keyboard keyboard operation";
+
+        background-color: rgba(255, 255, 255, 0.61);
+        padding: 2rem;
+        border-radius: 1.5rem;
+        max-width: 30rem;
+}
+
+#display {
+    grid-area: display;
+    width: 100%;
+    overflow: hidden;
+    text-align: end;
+    text-overflow: ellipsis;
+}
+
+#clean {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "reset reset backspace";
+    grid-area: clean;
+}
+
+.reset {
+    grid-area: reset;
+}
+
+.backspace {
+    grid-area: backspace;
+}
+
+#operation {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "division"
+        "multiply"
+        "subtract"
+        "sum"
+        "equal";
+    grid-area: operation;
+}
+
+.division {
+    grid-area: division;
+}
+
+.multiply {
+    grid-area: multiply;
+}
+
+.subtract {
+    grid-area: subtract;
+}
+
+.sum {
+    grid-area: sum;
+}
+
+.equal {
+    grid-area: equal;
+}
+
+#keyboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "seven eight nine"
+        "four five six"
+        "one two three"
+        "zero zero zero";
+    grid-area: keyboard;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+
+
+.division,
+.subtract,
+.multiply,
+.sum {
+    background-color: rgb(36, 243, 36);
+}
+
+.division:hover,
+.subtract:hover,
+.multiply:hover,
+.sum:hover {
+    background-color: rgb(12, 170, 12);
+}
+
+.equal {
+    background-color: rgb(58, 55, 240);
+}
+
+.equal:hover {
+    background-color: rgb(37, 33, 245);
+}
+
+
+button,
+#display {
+    border: none;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: .7rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+}
